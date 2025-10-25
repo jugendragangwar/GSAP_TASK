@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Global dark theme */
+  html {
+    @apply bg-black;
+  }
+
+  body {
+    @apply bg-black text-white min-h-screen;
+  }
+
+  /* Make all main containers and sections black by default */
+  main, section, div[class*="container"] {
+    @apply bg-black;
+  }
+}
+
+@layer components {
+  .gradient-bg {
+    background: linear-gradient(to bottom, #18192e, #141522);
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:border-[#4e31ff] hover:shadow-[0_0_30px_0_#6e42e780];
+  }
+
+  .hex-pattern {
+    background-image: url('/hex-pattern.svg');
+    background-repeat: repeat;
+    background-size: 200px;
+    opacity: 0.1;
+  }
+}
+
+.glow {
+  box-shadow: 0 0 30px rgba(78, 49, 255, 0.3);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #4e31ff, #8b6fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Neon heading and behind text used by NeonTagline component */
+.neon-heading {
+  color: #ffffff;
+  text-shadow: 0 0 6px rgba(255,255,255,0.9),
+               0 0 12px rgba(78,49,255,0.85),
+               0 0 30px rgba(78,49,255,0.6),
+               0 0 60px rgba(139,103,255,0.15);
+}
+
+.neon-behind {
+  position: absolute;
+  top: -18%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  color: rgba(255,255,255,0.06);
+  font-weight: 700;
+  font-size: 5.25rem;
+  line-height: 1.05;
+  text-align: left;
+  transform: translateY(6%);
+  filter: blur(0.6px);
+  pointer-events: none;
+}
+
+@media (max-width: 640px) {
+  .neon-behind {
+    font-size: 2.25rem;
+    top: -8%;
+    transform: translateY(0%);
+  }
+  .neon-heading {
+    line-height: 1.05;
+  }
+}
+
+@keyframes frameLoop {
+  0%, 24.99%   { background-position: 0% 0%; }
+  25%, 49.99%  { background-position: 0% 33.33%; }
+  50%, 74.99%  { background-position: 0% 66.66%; }
+  75%, 100%    { background-position: 0% 100%; }
+}
+
+.animate-frameLoop {
+  animation: frameLoop 4s step-start infinite;
+  background-size: 100% 400%;
+}
+
+.text {
+  background-color: black;
+  color: white;
+  font-size: 22vw;
+  font-weight: bold;
+  margin: 0 auto;
+  padding: 10vw;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: multiply;
+}
+
+/* Responsive adjustments for text */
+@media (max-width: 1024px) {
+  .text {
+    font-size: 20vw;
+    padding: 8vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .text {
+    font-size: 18vw;
+    padding: 6vw;
+  }
+}
+
+@media (max-width: 640px) {
+  .text {
+    font-size: 16vw;
+    padding: 5vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .text {
+    font-size: 14vw;
+    padding: 4vw;
+  }
+}
