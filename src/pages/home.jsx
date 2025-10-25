@@ -9,7 +9,7 @@ import PaymentHero from "../components/PaymentsHero";
 import TestimonialsCarousel from "../components/TestimonialsCarousel";
 import Footer from "../components/Footer";
 
-export default function Home() {
+function Home() {
   return (
     <div className="min-h-screen text-white">
       <Header />
@@ -29,3 +29,5 @@ export default function Home() {
     </div>
   );
 }
+
+export default Home;
