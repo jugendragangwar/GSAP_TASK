@@ -1,30 +1,34 @@
-import Header from "../components/Header";
-import ExpertiseSection from "../components/Cards";
-import HeroWithNeonEffect from "../components/Hero";
-import PayoutServiceUI from "../components/Payout";
-import NeonTagline from "../components/Tagline";
-import SupportSection from "../components/Support";
-import PaymentSimplifySection from "../components/PaymentSimplify";
-import PaymentHero from "../components/Payment";
-import TestimonialsCarousel from "../components/Testimonal";
-import Footer from "../components/Footer";
+import Header from "../components/Header.jsx";
+import ExpertiseSection from "../components/Cards.jsx";
+import HeroWithNeonEffect from "../components/Hero.jsx";
+import PayoutServiceUI from "../components/Payout.jsx";
+import NeonTagline from "../components/Tagline.jsx";
+import SupportSection from "../components/Support.jsx";
+import PaymentSimplifySection from "../components/PaymentSimplify.jsx";
+import PaymentHero from "../components/Payment.jsx";
+import TestimonialsCarousel from "../components/Testimonal.jsx";
+import Footer from "../components/Footer.jsx";
 
 const Home = () => {
   return (
     <>
       <div className="min-h-screen text-white">
         <Header />
-        <ExpertiseSection />
-        <NeonTagline />
-        <div>
-          <PayoutServiceUI />
-        </div>
-        <HeroWithNeonEffect />
-        <SupportSection />
-        <PaymentSimplifySection />
-        <PaymentHero />
-        <TestimonialsCarousel />
-        <Footer />
+
+        <main>
+          <ExpertiseSection />
+          <NeonTagline />
+          <div>
+            <PayoutServiceUI />
+          </div>
+
+          <HeroWithNeonEffect />
+          <SupportSection />
+          <PaymentSimplifySection />
+          <PaymentHero />
+          <TestimonialsCarousel />
+          <Footer />
+        </main>
       </div>
     </>
   );

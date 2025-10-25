@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import bannerBg from "../assets/Banner -BG.png";
+import bannerBg from "../assets/BannerBG.png";
 
 function Header() {
   const [showNavbar, setShowNavbar] = useState(true);
