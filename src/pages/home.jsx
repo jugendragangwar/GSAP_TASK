@@ -1,6 +1,5 @@
-import React from "react";
-import Header from "../components/header";
-import ExpertiseSection from "../components/cards";
+import Header from "../components/Header";
+import ExpertiseSection from "../components/Cards";
 import HeroWithNeonEffect from "../components/HeroWithNeonEffect";
 import PayoutServiceUI from "../components/PayoutServiceUI";
 import NeonTagline from "../components/NeonTagline";
@@ -14,16 +13,12 @@ export default function Home() {
   return (
     <div className="min-h-screen text-white">
       <Header />
-
       <main>
         <ExpertiseSection />
         <NeonTagline />
-
-        {/* PayoutServiceUI with different background */}
         <div>
           <PayoutServiceUI />
         </div>
-
         <HeroWithNeonEffect />
         <SupportSection />
         <PaymentSimplifySection />
